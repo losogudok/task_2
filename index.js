@@ -173,9 +173,13 @@ function calcPopulation(name, cities, populations) {
 
 	return population;
 }
+
 getPopulation('Africa')
 	.then(function(value){
 		console.log('Total population in African cities: ', value);
+	})
+	.catch(function(){
+		alert('Got an API error');
 	});
 
 var name = window.prompt('Enter name of a city or country');
@@ -183,6 +187,9 @@ if (name) {
 	getPopulation(name)
 		.then(function(value){
 			console.log('Total population of ' + name +': ', value);
+		})
+		.catch(function(){
+			alert('Got an API error');
 		});
 }
 })();
