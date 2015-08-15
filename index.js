@@ -186,7 +186,7 @@ var name = window.prompt('Enter name of a city or country');
 if (name) {
 	getPopulation(name)
 		.then(function(value){
-			console.log('Total population of ' + name +': ', value);
+			alert('Total population of ' + name +': ' + value);
 		})
 		.catch(function(){
 			alert('Got an API error');
